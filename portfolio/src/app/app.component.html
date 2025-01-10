@@ -1,0 +1,154 @@
+<div class="bg-main">
+  <div class="center-content">
+    <div class="row">
+      <!-- Sidebar Column -->
+      <div class="col-md-5 side-bar">
+        <header>
+          <h1 style="color: #543787">Faeqah Fauzi</h1>
+          <h3>Front End Developer</h3>
+        </header>
+        <nav class="contents">
+          <ul>
+            <li (click)="selectSection('aboutMe')">About Me</li>
+            <li (click)="selectSection('projects')">Projects</li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Right Content Column -->
+      <div class="col-md-7 right-content">
+        <div class="about-me" [ngSwitch]="selectedSection">
+          <!-- About Me Section -->
+          <div *ngSwitchCase="'aboutMe'">
+            <header>
+              <h1>About Me</h1>
+            </header>
+            <section>
+              <h3 style="color: #543787; text-decoration: underline">
+                Who I Am
+              </h3>
+              <p>
+                Hi, I’m Faeqah Fauzi, a passionate Front-End Developer with
+                experience in building modern, responsive, and user-friendly web
+                applications.
+              </p>
+
+              <h3 style="color: #543787; text-decoration: underline">
+                Skills and Experience
+              </h3>
+              <ul>
+                <li>
+                  Proficient in HTML5, CSS3, JavaScript, and frameworks like
+                  Angular.
+                </li>
+                <li>
+                  Experienced in responsive design, cross-browser compatibility,
+                  and performance optimization.
+                </li>
+                <li>
+                  Hands-on experience working in agile environments and
+                  collaborating with cross-functional teams to deliver
+                  high-quality products.
+                </li>
+              </ul>
+
+              <h3 style="color: #543787; text-decoration: underline">
+                Technologies I'm Into
+              </h3>
+              <ul>
+                <li>
+                  React.js: Exploring this powerful JavaScript library for
+                  building user interfaces.
+                </li>
+                <li>
+                  TypeScript: Leveraging its static typing for larger, scalable
+                  applications.
+                </li>
+                <li>
+                  Sass/SCSS: Using CSS pre-processors for better styling
+                  organization and efficiency.
+                </li>
+                <li>
+                  Version Control (Git): Confident in using Git for version
+                  control and collaborative development.
+                </li>
+              </ul>
+
+              <h3 style="color: #543787; text-decoration: underline">
+                Technologies I'm Planning to Learn
+              </h3>
+              <ul>
+                <li>
+                  Vue.js: Interested in learning this progressive framework for
+                  building UIs.
+                </li>
+                <li>
+                  GraphQL: Exploring this query language for APIs and how it can
+                  optimize data fetching.
+                </li>
+                <li>
+                  Next.js: Looking to dive into this React-based framework for
+                  server-side rendering and static site generation.
+                </li>
+                <li>
+                  Web Accessibility (a11y): Committed to improving my
+                  understanding of accessibility to create inclusive web
+                  experiences.
+                </li>
+              </ul>
+
+              <h3 style="color: #543787; text-decoration: underline">
+                What Drives Me
+              </h3>
+              <p>
+                I’m passionate about creating beautiful, intuitive websites that
+                solve real-world problems and provide exceptional user
+                experiences.
+                <br />
+                I believe in writing clean, efficient code and am always
+                striving to improve my skills.
+              </p>
+
+              <h3 style="color: #543787; text-decoration: underline">
+                What I’m Looking For
+              </h3>
+              <p>
+                I’m always open to new challenges and learning opportunities to
+                expand my knowledge and skills as a developer.
+              </p>
+
+              <h3 style="color: #543787; text-decoration: underline">
+                Fun Fact
+              </h3>
+              <p>
+                I love staying active with spin classes and Pilates, and I’m
+                always exploring new hobbies to keep myself inspired. <br />
+                One of my favorite pastimes is playing video games, especially
+                Pokémon, which helps me unwind and get creative.
+              </p>
+            </section>
+          </div>
+
+          <!-- Projects Section -->
+          <div *ngSwitchCase="'projects'">
+            <header>
+              <h1>Projects</h1>
+            </header>
+            <section>
+              <p>This section will contain your projects.</p>
+              <!-- List your projects here -->
+            </section>
+          </div>
+
+          <!-- Default case if no section is selected -->
+          <div *ngSwitchDefault>
+            <header>
+              <h1>Welcome</h1>
+            </header>
+            <p>Please select a section from the left.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
